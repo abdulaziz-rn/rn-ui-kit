@@ -1,0 +1,28 @@
+{
+  "name": "rn-ui-kit",
+  "version": "1.0.0",
+  "description": "React Native UI Components Library",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib && babel src -d lib",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "react-native",
+    "ui-kit",
+    "components"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "metro-react-native-babel-preset": "^0.76.0"
+  }
+} 
