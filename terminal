@@ -1,3 +1,0 @@
-mkdir rn-ui-kit
-cd rn-ui-kit
-npm init -y 
