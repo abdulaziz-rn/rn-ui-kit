@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rm -rf lib && babel src -d lib --extensions \".js,.ts,.tsx\"",
-    "prepare": "npm run build"
+    "build:types": "tsc --emitDeclarationOnly",
+    "prepare": "npm run build && npm run build:types"
   },
   "keywords": [
     "react-native",
@@ -26,7 +27,9 @@
     "@babel/preset-env": "^7.22.0",
     "@babel/preset-react": "^7.22.0",
     "@babel/preset-typescript": "^7.26.0",
-    "metro-react-native-babel-preset": "^0.76.0"
+    "@types/react": "^18.3.18",
+    "metro-react-native-babel-preset": "^0.76.0",
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "socket.io-client": "^4.8.1"

@@ -1,7 +1,14 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps, TextStyle, StyleProp } from 'react-native';
 
-const Button = ({ 
+export interface ButtonProps extends TouchableOpacityProps {
+  title: string;
+  onPress: () => void;
+  style?: Record<string, any>;
+  textStyle?: StyleProp<TextStyle>;
+}
+
+const Button: React.FC<ButtonProps> = ({ 
   title, 
   onPress, 
   style, 

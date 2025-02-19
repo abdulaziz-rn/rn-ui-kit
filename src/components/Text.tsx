@@ -1,7 +1,15 @@
 import React from 'react';
-import { Text as RNText, StyleSheet } from 'react-native';
+import { Text as RNText, StyleSheet, TextProps, StyleProp, TextStyle } from 'react-native';
 
-const Text = ({ 
+type TextVariant = 'heading' | 'subheading' | 'body' | 'caption';
+
+export interface CustomTextProps extends TextProps {
+  children: React.ReactNode;
+  style?: StyleProp<TextStyle>;
+  variant?: TextVariant;
+}
+
+const Text: React.FC<CustomTextProps> = ({ 
   children, 
   style, 
   variant = 'body',
