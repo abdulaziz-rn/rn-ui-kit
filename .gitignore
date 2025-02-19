@@ -1,1 +1,5 @@
-node_modules
+# Exclude node_modules in root directory
+node_modules/
+
+# Exclude node_modules in any subdirectory
+**/node_modules/
