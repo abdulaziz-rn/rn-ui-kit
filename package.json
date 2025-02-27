@@ -30,7 +30,9 @@
     "@babel/preset-typescript": "^7.26.0",
     "@types/react": "^18.3.18",
     "metro-react-native-babel-preset": "^0.76.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "react-native-device-info": ">=8.0.0",
+    "react-native-webview": ">=11.22.7"
   },
   "dependencies": {
     "socket.io-client": "^4.8.1"
