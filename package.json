@@ -23,8 +23,8 @@
     "react-native-webview": ">=11.22.7"
   },
   "peerDependenciesMeta": {
-    "react-native-device-info": { "optional": true },
-    "react-native-webview": { "optional": true }
+    "react-native-device-info": { "optional": false },
+    "react-native-webview": { "optional": false }
   },
   "optionalDependencies": {
     "react-native-device-info": ">=8.0.0",
