@@ -22,6 +22,14 @@
     "react-native-device-info": ">=8.0.0",
     "react-native-webview": ">=11.22.7"
   },
+  "peerDependenciesMeta": {
+    "react-native-device-info": { "optional": true },
+    "react-native-webview": { "optional": true }
+  },
+  "optionalDependencies": {
+    "react-native-device-info": ">=8.0.0",
+    "react-native-webview": ">=11.22.7"
+  },
   "devDependencies": {
     "@babel/cli": "^7.22.0",
     "@babel/core": "^7.22.0",
