@@ -1,8 +1,10 @@
+import DeviceInfo from 'react-native-device-info';
+
 export async function connect() {
     console.log('Connecting to server...');
 }
 
-export async function getInfo(cid, data = {}, lang) {
+export async function getInfo(cid: string, data = {}, lang: string) {
     const BUNDLE_ID = await DeviceInfo.getBundleId()
     const response = await fetch(`https://api.litedev.com/v1/member`, {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.

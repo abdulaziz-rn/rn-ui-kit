@@ -5,12 +5,16 @@ export type ConnectResponse = {
 export interface SanarKitInterface {
     connect(cid: string, info: any, lang?: string): Promise<ConnectResponse>;
     disconnect(): void;
+    connected: boolean;
 }
-export declare function getInfo(cid: string, data: {} | undefined, lang: string): Promise<any>;
 declare class SanarKit implements SanarKitInterface {
     eventListner: any;
     session: any;
     info: any;
+    connected: boolean;
+    private _isChatEnabled;
+    get isChatEnabled(): boolean;
+    setIsChatEnabled(value: boolean): void;
     connect(cid: string, info: any, lang?: string): Promise<{
         message: any;
         status: boolean;

@@ -1,2 +1,2 @@
-export function connect(): Promise<void>;
-export function getInfo(cid: any, data: {} | undefined, lang: any): Promise<any>;
+export declare function connect(): Promise<void>;
+export declare function getInfo(cid: string, data: {} | undefined, lang: string): Promise<any>;
