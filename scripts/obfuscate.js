@@ -2,6 +2,12 @@ const JavaScriptObfuscator = require('javascript-obfuscator');
 const fs = require('fs');
 const path = require('path');
 
+// Files to exclude from obfuscation
+const EXCLUDED_FILES = [
+    'index.js',
+    'SanarKit.js'
+];
+
 function obfuscateFile(filePath) {
     const code = fs.readFileSync(filePath, 'utf8');
     
@@ -20,7 +26,17 @@ function obfuscateFile(filePath) {
         stringArrayEncoding: ['base64'],
         stringArrayThreshold: 0.75,
         transformObjectKeys: false,
-        unicodeEscapeSequence: false
+        unicodeEscapeSequence: false,
+        reservedStrings: [],
+        reservedNames: [],
+        domainLock: [],
+        sourceMap: false,
+        inputFileName: '',
+        outputFileName: '',
+        seed: 0,
+        target: 'browser',
+        ignoreRequireImports: true,
+        requiredModules: true
     });
 
     fs.writeFileSync(filePath, obfuscationResult.getObfuscatedCode());
@@ -35,7 +51,11 @@ function processDirectory(directory) {
         
         if (stat.isDirectory()) {
             processDirectory(filePath);
-        } else if (file.endsWith('.js') && !file.endsWith('.d.js')) {
+        } else if (
+            file.endsWith('.js') && 
+            !file.endsWith('.d.js') && 
+            !EXCLUDED_FILES.includes(file)
+        ) {
             obfuscateFile(filePath);
         }
     });
