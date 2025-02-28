@@ -1,7 +1,16 @@
-export { default as Button } from './components/Button';
-export { default as Text } from './components/Text'; 
-export { default as SanarKit } from './SanarKit';
-export { default as SKChat } from './screens/SKChat';
-// Also export the types
+import SanarKit from './SanarKit';
+import Button from './components/Button';
+import Text from './components/Text';
+import Container from './components/Container';
+import SKChat from './screens/SKChat';
+
+export {
+    SanarKit,
+    Button,
+    Text,
+    Container,
+    SKChat
+};
+
 export type { ButtonProps } from './components/Button';
 export type { CustomTextProps } from './components/Text';

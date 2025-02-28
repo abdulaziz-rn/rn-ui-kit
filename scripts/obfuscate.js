@@ -5,7 +5,11 @@ const path = require('path');
 // Files to exclude from obfuscation
 const EXCLUDED_FILES = [
     'index.js',
-    'SanarKit.js'
+    'SanarKit.js',
+    'Button.js',
+    'Text.js',
+    'Container.js',
+    'SKChat.js'
 ];
 
 function obfuscateFile(filePath) {
