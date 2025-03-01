@@ -20,7 +20,8 @@
     "react": "*",
     "react-native": "*",
     "react-native-device-info": ">=8.0.0",
-    "react-native-webview": ">=11.22.7"
+    "react-native-webview": ">=11.22.7",
+    "react-native-agora": ">=4.5.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.0",
