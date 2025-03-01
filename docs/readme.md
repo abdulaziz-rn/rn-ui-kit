@@ -11,7 +11,9 @@ npm install https://github.com/abdulaziz-rn/rn-ui-kit.git
 yarn add https://github.com/abdulaziz-rn/rn-ui-kit.git
 ```
 
-### Install Other Dependencies
+### SanarKit SDK Dependencies Installation
+
+The SanarKit SDK requires several peer dependencies to be installed in your project. These dependencies will be automatically installed when you run the setup script.
 
 Create a Sanar config file `sanar.config.js` in your project root directory and copy the snippet below:
 
@@ -56,8 +58,8 @@ if (process.platform === 'darwin' && installedNewDependencies) {
 console.log('✨ Setup completed successfully!');
 ```
 
-### Add Setup Script to `package.json`
-Add the following script to your `package.json` file:
+### Add Setup to `package.json`
+Add the following to your `package.json` file:
 
 ```json
 "scripts": {
@@ -74,7 +76,7 @@ npm run sanar:setup
 yarn sanar:setup
 ```
 
-> **Note**: Make sure you have Node.js version 14 or higher installed.
+> **Note**: Make sure you have Node.js version 16 or higher installed.
 
 ### Manual Installation
 If you prefer to install dependencies manually, here are the required peer dependencies:
