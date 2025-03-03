@@ -20,8 +20,8 @@ const SKChat = (props: ISanarChat) => {
     useEffect(() => {
         if (enable) {
             if (SanarKit.session) {
-                // let CHAT_URL = `${SanarKit.session.chatUrl}/${appointmentId}/${empId}?token=${SanarKit.session.token}&lang=${language}`;
-                let CHAT_URL = `${'http://192.168.1.146:9003/chat'}/${appointmentId}/${empId}?token=${SanarKit.session.token}&lang=${language}`;
+                let CHAT_URL = `${SanarKit.session.chatUrl}/${appointmentId}/${empId}?token=${SanarKit.session.token}&lang=${language}`;
+                // let CHAT_URL = `${'http://192.168.1.146:9003/chat'}/${appointmentId}/${empId}?token=${SanarKit.session.token}&lang=${language}`;
                 if (!props.navigationOption) { CHAT_URL = `${CHAT_URL}&nav=0` }
                 setBaseUrl(CHAT_URL);
             } else {
