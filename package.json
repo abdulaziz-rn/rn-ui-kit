@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rm -rf lib && babel src -d lib --extensions \".js,.ts,.tsx\"",
     "build:types": "tsc --emitDeclarationOnly",
-    "prepare": "npm run build && npm run build:types"
+    "prepare": "if [ -d \"src\" ]; then npm run build && npm run build:types; fi"
   },
   "keywords": [
     "react-native",
@@ -35,5 +35,8 @@
   },
   "dependencies": {
     "socket.io-client": "^4.8.1"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
